@@ -1,0 +1,635 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.main-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg,
+      #10002b,
+      #240046,
+      #5a189a,
+      #7b2cbf);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.birthday-card {
+  width: 100%;
+  max-width: 550px;
+  padding: 50px 30px;
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+
+  backdrop-filter: blur(15px);
+
+  box-shadow: 0 0 40px rgba(200, 100, 255, 0.2);
+
+  animation: appear 1.5s ease;
+}
+
+.emoji {
+  font-size: 75px;
+  margin-bottom: 20px;
+}
+
+.small-text {
+  color: #e0aaff;
+  letter-spacing: 4px;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: white;
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: #e0aaff;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: #f3e8ff;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.surprise-btn {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+
+  background: linear-gradient(90deg,
+      #c77dff,
+      #e0aaff);
+
+  color: #240046;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.surprise-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 25px #e0aaff;
+}
+
+.footer {
+  color: #e0aaff;
+  margin-top: 30px;
+  font-size: 13px;
+}
+
+.stars {
+  position: absolute;
+  top: 10%;
+  color: white;
+  font-size: 30px;
+  animation: float 4s infinite alternate;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(30px);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media(max-width: 600px) {
+  h1 {
+    font-size: 29px;
+  }
+
+  h2 {
+    font-size: 17px;
+  }
+
+  .birthday-card {
+    padding: 40px 20px;
+  }
+}
+
+.surprise-screen {
+  animation: appear 1s ease;
+}
+
+.cake-animation {
+  animation: bounce 1.5s infinite;
+}
+
+.funny-box {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid #c77dff;
+  border-radius: 20px;
+  padding: 25px 15px;
+  margin: 25px 0;
+  color: white;
+  line-height: 2;
+}
+
+.funny-box h3 {
+  color: #e0aaff;
+  margin: 12px 0;
+}
+
+.special-text {
+  font-size: 19px;
+  color: #e0aaff;
+  margin: 20px 0;
+}
+
+.balloons {
+  font-size: 30px;
+  margin: 20px 0;
+  animation: float 2s infinite alternate;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.letter-card {
+  max-width: 650px;
+  animation: appear 1s ease;
+}
+
+.letter-content {
+  background: rgba(255, 255, 255, 0.10);
+  padding: 25px;
+  border-radius: 20px;
+  border: 1px solid #c77dff;
+  color: #fff;
+  text-align: left;
+  line-height: 1.9;
+}
+
+.letter-content p {
+  margin-bottom: 18px;
+}
+
+.letter-content h3 {
+  color: #e0aaff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.letter-content h2 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.photo-box {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 12px;
+  border-radius: 18px;
+  border: 1px solid #c77dff;
+  transition: 0.3s;
+}
+
+.photo-box:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 20px #c77dff;
+}
+
+.photo-box img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.photo-box p {
+  color: white;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+@media(max-width: 450px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .photo-box img {
+    height: 120px;
+  }
+}
+
+.music-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  padding: 12px 18px;
+  border: 1px solid #e0aaff;
+  border-radius: 25px;
+  background: #5a189a;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 15px #c77dff;
+}
+
+.floating-hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 20px;
+  pointer-events: none;
+  animation: heartFloat 5s ease-in-out infinite alternate;
+}
+
+@keyframes heartFloat {
+  from {
+    transform: translateY(10px);
+    opacity: 0.5;
+  }
+
+  to {
+    transform: translateY(80vh);
+    opacity: 1;
+  }
+}
+
+.birthday-card {
+  position: relative;
+  z-index: 1;
+}
+
+.birthday-card:hover {
+  box-shadow: 0 0 45px rgba(199, 125, 255, 0.4);
+
+  .final-card {
+    max-width: 650px;
+  }
+
+  .countdown {
+    margin: 25px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+  }
+
+  .countdown-box {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .countdown-box div {
+    background: #5a189a;
+    padding: 15px;
+    border-radius: 15px;
+    min-width: 75px;
+    color: white;
+  }
+
+  .countdown-box h2 {
+    font-size: 25px;
+    color: #e0aaff;
+  }
+
+  .countdown-box p {
+    font-size: 12px;
+  }
+
+  .big-cake {
+    font-size: 110px;
+    animation: bounce 1.5s infinite;
+    margin: 20px;
+  }
+
+  .wish-message {
+    padding: 20px;
+    background: rgba(199, 125, 255, 0.15);
+    border-radius: 20px;
+    animation: appear 1s ease;
+  }
+
+  .wish-message h1 {
+    color: #e0aaff;
+  }
+
+  .wish-message p {
+    color: white;
+    line-height: 1.8;
+    margin: 20px 0;
+  }
+
+  .surprise-btn {
+    box-shadow: 0 0 15px rgba(199, 125, 255, 0.4);
+    transition: all 0.4s ease;
+  }
+
+  .surprise-btn:hover {
+    transform: translateY(-5px) scale(1.08);
+    box-shadow: 0 0 30px #c77dff;
+  }
+
+  .birthday-card {
+    transition: all 0.5s ease;
+  }
+
+  .photo-box:hover {
+    transform: scale(1.05) rotate(2deg);
+  }
+
+  ::selection {
+    background: #c77dff;
+    color: white;
+  }
+
+  @media screen and (max-width: 600px) {
+
+    .main-container {
+      padding: 15px;
+    }
+
+    .birthday-card {
+      padding: 30px 18px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 27px;
+    }
+
+    h2 {
+      font-size: 17px;
+    }
+
+    .description {
+      font-size: 14px;
+    }
+
+    .surprise-btn {
+      font-size: 14px;
+      padding: 13px 22px;
+    }
+
+    .gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .countdown-box {
+      gap: 8px;
+    }
+
+    .countdown-box div {
+      min-width: 65px;
+    }
+
+    .music-btn {
+      top: 10px;
+      right: 10px;
+      font-size: 12px;
+    }
+  }
+}
+
+/* GALAXY FINAL PAGE */
+
+.universe-page {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 40%, #552080, #190c35 55%, #05010d);
+  color: white;
+  padding: 30px 15px;
+  box-sizing: border-box;
+}
+
+.universe-content {
+  position: relative;
+  z-index: 3;
+  max-width: 750px;
+  animation: appear 2s ease;
+}
+
+.universe-small {
+  color: #e0aaff;
+  letter-spacing: 5px;
+  font-size: 14px;
+}
+
+.universe-title {
+  font-size: clamp(45px, 10vw, 90px);
+  margin: 25px 0;
+  letter-spacing: 8px;
+  color: white;
+  text-shadow:
+    0 0 10px #fff,
+    0 0 25px #c77dff,
+    0 0 50px #9d4edd;
+  animation: glow 2s infinite alternate;
+}
+
+.universe-subtitle {
+  color: #e0aaff;
+  font-size: clamp(17px, 4vw, 25px);
+}
+
+.universe-description {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #eee0ff;
+  margin: 25px auto;
+}
+
+.moon {
+  position: absolute;
+  top: 10%;
+  right: 12%;
+  font-size: 65px;
+  animation: float 4s infinite ease-in-out;
+}
+
+.planet {
+  position: absolute;
+  bottom: 12%;
+  left: 10%;
+  font-size: 75px;
+  animation: float 5s infinite ease-in-out;
+}
+
+.stars,
+.stars-two {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%, white, transparent),
+    radial-gradient(2px 2px at 70% 20%, white, transparent),
+    radial-gradient(3px 3px at 40% 80%, #e0aaff, transparent),
+    radial-gradient(2px 2px at 85% 65%, white, transparent),
+    radial-gradient(2px 2px at 15% 75%, white, transparent);
+  background-size: 250px 250px;
+  animation: starsMove 15s linear infinite;
+}
+
+.stars-two {
+  transform: scale(1.5);
+  opacity: 0.4;
+  animation-duration: 25s;
+}
+
+.universe-btn {
+  padding: 16px 30px;
+  border: 1px solid #e0aaff;
+  border-radius: 40px;
+  background: linear-gradient(135deg, #9d4edd, #5a189a);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 25px #c77dff;
+  transition: 0.3s;
+}
+
+.universe-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 40px #e0aaff;
+}
+
+.final-message {
+  margin-top: 35px;
+  padding: 25px;
+  border: 1px solid #c77dff;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  animation: appear 1s ease;
+}
+
+.final-message p {
+  line-height: 1.8;
+}
+
+.final-message h1 {
+  color: #e0aaff;
+  text-shadow: 0 0 20px #c77dff;
+}
+
+.final-message h3 {
+  color: #e0aaff;
+}
+
+.made-by {
+  margin-top: 25px;
+  letter-spacing: 2px;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #c77dff;
+  }
+
+  to {
+    text-shadow: 0 0 35px #e0aaff, 0 0 60px #9d4edd;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+@keyframes starsMove {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 250px 250px;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .universe-title {
+    letter-spacing: 4px;
+  }
+
+  .moon {
+    font-size: 40px;
+  }
+
+  .planet {
+    font-size: 45px;
+  }
+}
